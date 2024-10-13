@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>EXTENSION CONVERTER</title>
+</head>
+<body>
+	<style>
+		.div{
+			display: grid;
+			justify-content: center;
+			align-items: center;
+		    grid-gap: 10px;
+		}
+		button{
+			width: 30vw;
+			height: 8vh;
+			background:  #ffcc99;
+			border-radius: 16px;
+		}
+		h1{
+			text-align: center;
+		}
+		.tot{
+			box-shadow: 5px 5px #888888;
+			border-radius: 20px;
+			width: 70vw;
+            height: 200px;
+		     background:#ffcccc;
+		}
+		.total{
+			display: grid;
+			justify-content: center;
+			align-content: center;
+			grid-row-gap: 20px;
+		}
+		body{
+			background:  #006080;
+		}
+	</style>
+	<div class="total">
+	    <div class="tot">
+	        <form action="/pdftoword" method="post" enctype=multipart/form-data>
+            <h1>PDF TO DOCUMENT</h1>
+            <div class="div">
+     	        <input type="file" name="file">
+	            <button type="submit" href="{{url_for('pdftoword')}}">DOWNLOAD</button>
+            </div>
+            </form>
+        </div>
+        <div class="tot">
+            <form action="/wordtopdf" method="post" enctype=multipart/form-data>
+            <h1>DOCUMENT TO PDF</h1>
+            <div class="div">
+	            <input type="file" name="file">
+	            <button type="submit" href="{{url_for('wordtopdf')}}">DOWNLOAD</button>
+            </div>
+            </form>
+        </div>
+        <div class="tot">
+            <form action="/pptxtopdf" method="post" enctype=multipart/form-data>
+            <h1>POWERPOINT TO PDF</h1>
+            <div class="div">
+	            <input type="file" name="file">
+	            <button type="submit" href="{{url_for('pptxtopdf')}}">DOWNLOAD</button>
+            </div>
+            </form>
+        </div>
+        <div class="tot">
+            <form action="/exceltopdf" method="post" enctype=multipart/form-data>
+            <h1>EXCEL TO PDF</h1>
+            <div class="div">
+	            <input type="file" name="file">
+	            <button type="submit" href="{{url_for('exceltopdf')}}">DOWNLOAD</button>
+            </div>
+            </form>
+        </div>
+        <div class="tot">
+            <form action="/compressimage" method="post" enctype=multipart/form-data>
+            <h1>COMPRESS JPG </h1>
+            <div class="div">
+	            <input type="file" name="file">
+	            <button type="submit" href="{{url_for('compressimage')}}">DOWNLOAD</button>
+            </div>
+            </form>
+        </div>
+        <div class="tot">
+            <form action="/compresspdf" method="post" enctype=multipart/form-data>
+            <h1>COMPRESS PDF </h1>
+            <div class="div">
+	            <input type="file" name="file">
+	            <button type="submit" href="{{url_for('compresspdf')}}">DOWNLOAD</button>
+            </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
